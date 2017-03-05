@@ -44,13 +44,6 @@ class clientThread extends Thread {
                     os.println("J_ERR");
                 }
 
-               /* if (name.startsWith("JOIN"))  {
-                    System.out.println("");
-                }
-               String JOIN = "JOIN {" + name + "}, {" +
-                       clientSocket.getInetAddress() + "}:{" + clientSocket.getPort()+ "}";
-               System.out.println(JOIN);
-               */
             }
 
             os.println("Hello [" + name +"]"
@@ -117,8 +110,7 @@ class clientThread extends Thread {
                         + clientSocket.getInetAddress());
             }
 
-            //String QUIT = is.readLine();
-            //System.out.println("There should be sum quit here:" + QUIT); os.println("Server says Bye");
+
             TCPChatServer.removeFromClientList(client,name);
             System.out.println("User: [" + name + "] left the chatroom.");
             os.println("Server says Bye");
@@ -133,9 +125,7 @@ class clientThread extends Thread {
                     }
                 }
             }
-            //String QUIT = is.readLine();
-            //System.out.println("There should be sum quit here:" + QUIT);
-            //os.println("Server says Bye");
+
             TCPChatServer.removeFromClientList(client,name);
             System.out.println("User: [" + name + "] left the chatroom.");
             os.println("Server says Bye");
@@ -143,9 +133,6 @@ class clientThread extends Thread {
 
             timer.cancel();
 
-            // Never reached? D:
-            String QUIT = is.readLine();
-            System.out.println("There should be sum quit here:" + QUIT);
 
 
 
